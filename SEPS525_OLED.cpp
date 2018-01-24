@@ -141,12 +141,13 @@ SEPS525_OLED::SEPS525_OLED(int8_t cs, int8_t dc, int8_t rst, int8_t en) : Adafru
 	_cs   = cs;
     _dc   = dc;
     _rst  = rst;
+	_en = en;
 	
 }
 
 void SEPS525_OLED::begin(void)
 {
-	static const int pinVddEnable = 7;
+	int pinVddEnable = en;
 
 int pinRS = _dc;
 int pinSS = _cs;
