@@ -5,7 +5,7 @@
 
 class SEPS525_OLED : public Adafruit_GFX {
 	public:
-		SEPS525_OLED(void);
+		SEPS525_OLED(int8_t _CS, int8_t _DC, int8_t _RST, int8_t _EN);
 
 		void begin(void);
 
@@ -14,6 +14,12 @@ class SEPS525_OLED : public Adafruit_GFX {
 		void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 		void fillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
 		uint16_t color565(uint8_t r, uint8_t g, uint8_t b);
+	
+	
+	#ifdef (ESP8266) || defined (ESP32)
+        int8_t   _cs, _dc, _rst, _sclk, _mosi, _miso;
+	#endif
+	
 };
 
 #endif
