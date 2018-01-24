@@ -1,11 +1,7 @@
 #include <SEPS525_OLED.h>
 #include <SPI.h>
 
-static const int pinVddEnable = 7;
 
-static const int pinRS = 5;
-static const int pinSS = 10;
-static const int pinReset = 6;
 
 static void seps525_reg(int idx, int value)
 {
@@ -146,6 +142,11 @@ SEPS525_OLED::SEPS525_OLED(void) : Adafruit_GFX(160, 128)
 
 void SEPS525_OLED::begin(void)
 {
+	static const int pinVddEnable = 7;
+
+static const int pinRS = 5;
+static const int pinSS = 10;
+static const int pinReset = 6;
 	seps525_init();
 }
 
