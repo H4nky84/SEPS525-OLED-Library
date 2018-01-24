@@ -17,7 +17,7 @@ class SEPS525_OLED : public Adafruit_GFX {
 	
 	
 	#ifdef (ESP8266) || defined (ESP32)
-        int8_t   _cs, _dc, _rst, _sclk, _mosi, _miso;
+        int8_t   _cs, _dc, _rst, _sclk, _mosi, _miso, _en;
 	#endif
 	
 };
