@@ -136,17 +136,21 @@ static void seps525_init(void)
   seps525_reg(0x06, 0x01);
 }
 
-SEPS525_OLED::SEPS525_OLED(void) : Adafruit_GFX(160, 128) 
+SEPS525_OLED::SEPS525_OLED(int8_t cs, int8_t dc, int8_t rst, int8_t en) : Adafruit_GFX(160, 128) 
 {
+	_cs   = cs;
+    _dc   = dc;
+    _rst  = rst;
+	
 }
 
 void SEPS525_OLED::begin(void)
 {
 	static const int pinVddEnable = 7;
 
-static const int pinRS = 5;
-static const int pinSS = 10;
-static const int pinReset = 6;
+int pinRS = _dc;
+int pinSS = _cs;
+int pinReset = _rst;
 	seps525_init();
 }
 
