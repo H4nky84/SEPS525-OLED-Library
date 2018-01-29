@@ -1,6 +1,11 @@
 #include <SEPS525_OLED.h>
 #include <SPI.h>
 
+int pinVddEnable = 7;
+int pinRS = 26;
+int pinSS = 27;
+int pinReset = 25;
+
 
 
 static void seps525_reg(int idx, int value)
