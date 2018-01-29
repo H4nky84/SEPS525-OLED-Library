@@ -6,6 +6,7 @@
 class SEPS525_OLED : public Adafruit_GFX {
 	public:
 		SEPS525_OLED(int8_t _CS, int8_t _DC, int8_t _RST, int8_t _EN);
+		SEPS525_OLED(void);
 
 		void begin(void);
 
