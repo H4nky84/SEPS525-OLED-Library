@@ -152,7 +152,7 @@ SEPS525_OLED::SEPS525_OLED(int8_t cs, int8_t dc, int8_t rst, int8_t en) : Adafru
 
 void SEPS525_OLED::begin(void)
 {
-	int pinVddEnable = en;
+	int pinVddEnable = _en;
 	int pinRS = _dc;
 	int pinSS = _cs;
 	int pinReset = _rst;
