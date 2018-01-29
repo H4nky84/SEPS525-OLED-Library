@@ -139,8 +139,8 @@ static void seps525_init(void)
 SEPS525_OLED::SEPS525_OLED(int8_t cs, int8_t dc, int8_t rst, int8_t en) : Adafruit_GFX(160, 128) 
 {
 	_cs   = cs;
-    _dc   = dc;
-    _rst  = rst;
+    	_dc   = dc;
+    	_rst  = rst;
 	_en = en;
 	
 }
@@ -148,10 +148,9 @@ SEPS525_OLED::SEPS525_OLED(int8_t cs, int8_t dc, int8_t rst, int8_t en) : Adafru
 void SEPS525_OLED::begin(void)
 {
 	int pinVddEnable = en;
-
-int pinRS = _dc;
-int pinSS = _cs;
-int pinReset = _rst;
+	int pinRS = _dc;
+	int pinSS = _cs;
+	int pinReset = _rst;
 	seps525_init();
 }
 
