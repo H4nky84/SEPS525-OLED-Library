@@ -12,7 +12,11 @@
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 
+//SEPS525_OLED with CS = 27, DC/RS = 26, RST = 25, EN = 7
 SEPS525_OLED tft;
+
+//SEPS525_OLED(cs, dc, rst, en) 
+//SEPS525_OLED tft = SEPS525_OLED(27, 26, 25, 7);
 
 void setup(void) {
   Serial.begin(9600);
